@@ -97,6 +97,6 @@ This phase establishes a **CI/CD pipeline** to automate building, testing, and (
 ---
 
 ### Author  
-**Hyder Shahzaib Ahmed** – *Cloud & DevOps Enthusiast*  
+**Hyder Shahzaib Ahmed** – *Network & Cloud Automation Enthusiast*
 
 > This repository demonstrates a comprehensive approach to **test automation, CI/CD, and DevOps** best practices. It serves as a learning platform and a showcase of my ongoing journey in building robust, automated, and cloud-native solutions.
