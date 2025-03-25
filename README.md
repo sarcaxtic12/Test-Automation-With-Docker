@@ -21,8 +21,8 @@ This project implements a **containerized microservice** and **automated test su
 
 ## Project Breakdown (Phases 1-3)
 
-### Phase 1: Docker-Based Microservice Setup **(COMPLETED)**
-We begin by creating a simple microservice (in Python or Go) and containerizing it:  
+### Phase 1: Docker-Based Microservice Setup ✅
+We begin by creating a simple microservice (in Python) and containerizing it:  
 - **Microservice Development**  
   - A minimal API using Python (Flask/FastAPI).
 - **Dockerfile Creation**  
