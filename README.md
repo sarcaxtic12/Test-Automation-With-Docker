@@ -1,7 +1,6 @@
 # Cloud-Native Test Automation with Docker & Jenkins  
 This project is curated by me, **Hyder Shahzaib Ahmed**, to showcase my **test automation, CI/CD, and DevOps** skills. It simulates a **cloud-native environment** where I build and deploy a containerized microservice, then integrate **automated tests** to ensure reliability, security, and performance. By leveraging Docker, Jenkins, and Python (with optional Go or Robot Framework), this solution enables **seamless, automated testing** and **continuous delivery** without manual intervention.
 
-#### *This project is in it intialization phase, this repo is currently a simple roadmap and will be updated once work as begun. The following roadmap is a general idea of what I will be doing broken down in phases and are not a accurate depiction of exactly what the project will look like in its mature stage.
 ---
 
 ## Problem  
