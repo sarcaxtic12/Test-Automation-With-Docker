@@ -21,17 +21,22 @@ This project implements a **containerized microservice** and **automated test su
 
 ## Project Breakdown (Phases 1-3)
 
-### Phase 1: Docker-Based Microservice Setup
+### Phase 1: Docker-Based Microservice Setup **(COMPLETED)**
 We begin by creating a simple microservice (in Python or Go) and containerizing it:  
 - **Microservice Development**  
-  - A minimal API using Python (Flask/FastAPI) or Go (Gin/Echo).  
+  - A minimal API using Python (Flask/FastAPI).
 - **Dockerfile Creation**  
   - Dockerfile for consistent builds, ensuring the same environment across dev and prod.  
-- **Local or AWS Environment**  
-  - Optionally deploy the container to an AWS EC2 instance or run locally via Docker Compose.  
+- **Local Environment**  
+  - Deploy the container to run locally via Docker Compose.  
 - **Documentation & Verification**  
   - Clear instructions on how to build and run the container (`docker build`, `docker run`).  
   - Basic tests to verify the API endpoints respond correctly.
+#### *Deployment*
+![image](https://github.com/user-attachments/assets/69e48ffa-c0cc-444b-9810-ddd3e3e05ba7)
+
+#### *Verification*
+![image](https://github.com/user-attachments/assets/aa118d0c-039b-4290-95f4-069967f87c1f)
 
 ---
 
