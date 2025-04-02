@@ -19,18 +19,16 @@ This project implements a **containerized microservice** and **automated test su
 ---
 
 ## Project Breakdown (Phases 1-3)
-
-### Phase 1: Docker-Based Microservice Setup ✅
-We begin by creating a simple microservice (in Python) and containerizing it:  
+### Phase 1: Docker-Based Microservice Setup ✅  
+We started by creating a minimal Flask microservice in Python and containerizing it with Docker:
 - **Microservice Development**  
-  - A minimal API using Python (Flask/FastAPI).
+  - Developed a simple Flask API with two endpoints: the root (`/`) returning a welcome message and `/health` returning a status check.
 - **Dockerfile Creation**  
-  - Dockerfile for consistent builds, ensuring the same environment across dev and prod.  
+  - Created a Dockerfile that installs the necessary dependencies, sets up the working directory, and runs the Flask app for reproducible builds across environments.
 - **Local Environment**  
-  - Deploy the container to run locally via Docker Compose.  
+  - Built and ran the Docker image locally using `docker build` and `docker run`, confirming that the containerized service is accessible on port 5000.
 - **Documentation & Verification**  
-  - Clear instructions on how to build and run the container (`docker build`, `docker run`).  
-  - Basic tests to verify the API endpoints respond correctly.
+  - Provided clear instructions in the README on how to build and run the container, including example commands and how to test the endpoints using tools like `curl` or a web browser.
 #### *Deployment*
 ![image](https://github.com/user-attachments/assets/69e48ffa-c0cc-444b-9810-ddd3e3e05ba7)
 
