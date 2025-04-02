@@ -20,15 +20,13 @@ This project implements a **containerized microservice** and **automated test su
 
 ## Project Breakdown (Phases 1-3)
 ### Phase 1: Docker-Based Microservice Setup ✅  
-We started by creating a minimal Flask microservice in Python and containerizing it with Docker:
+I started by creating a minimal Flask microservice in Python and containerizing it with Docker:
 - **Microservice Development**  
   - Developed a simple Flask API with two endpoints: the root (`/`) returning a welcome message and `/health` returning a status check.
 - **Dockerfile Creation**  
   - Created a Dockerfile that installs the necessary dependencies, sets up the working directory, and runs the Flask app for reproducible builds across environments.
 - **Local Environment**  
   - Built and ran the Docker image locally using `docker build` and `docker run`, confirming that the containerized service is accessible on port 5000.
-- **Documentation & Verification**  
-  - Provided clear instructions in the README on how to build and run the container, including example commands and how to test the endpoints using tools like `curl` or a web browser.
 #### *Deployment*
 ![image](https://github.com/user-attachments/assets/69e48ffa-c0cc-444b-9810-ddd3e3e05ba7)
 
@@ -37,20 +35,29 @@ We started by creating a minimal Flask microservice in Python and containerizing
 
 ---
 
-### Phase 2: Automated Testing Framework
-This phase introduces **automated testing** to validate functionality, integration points, and reliability:  
-- **Pytest or Robot Framework**  
-  - Create test suites covering all REST endpoints (status codes, payloads, error handling).  
-- **Test Configuration**  
-  - Use environment variables or config files to point tests to local or remote instances.  
-- **Test Execution**  
-  - Run tests locally via `pytest` or `robot.` to ensure the containerized service meets requirements.  
-- **Reporting**  
-  - Generate pass/fail reports for quick feedback to developers.  
+### Phase 2: Automated Testing Framework ✅
+This phase introduces **automated testing** to validate functionality, integration points, and reliability of our containerized microservice.
+- **Test Suite Organization**
+  - The tests are split into two files:
+    - `tests/test_endpoints.py` – Covers happy-path tests for all REST endpoints (`/`, `/health`, `/info`, `/user/<username>`, and `/data`).
+    - `tests/test_error_cases.py` – Contains tests for error and edge cases, such as invalid endpoints, method not allowed errors, and invalid user lookups.
+- **Test Configuration**
+  - The tests are configured to target the running microservice at `http://localhost:5000`. Environment variables or config files can be added later to support different environments (local, Docker, AWS, etc.).
+- **Test Execution**
+  - Tests are executed using Pytest via the command:
+    ```bash
+    python -m pytest -v -s
+    ```
+- **Reporting**
+  - The test output provides pass/fail reports for each endpoint. Custom assertion messages are used in error tests to display response details, helping diagnose issues quickly.
+- **Connectivity & Validation**
+  - Tests have been verified to run consistently in local Docker environments and can be adapted to run in Cloud environments.
+  - Known edge cases (such as invalid user requests and unsupported HTTP methods) are documented within the tests, laying a foundation for future enhancements like security and performance testing.
+#### *Deployment*
+![image](https://github.com/user-attachments/assets/4c9f64c4-31e5-4767-aa98-6cd02cb8487d)
 
-**Connectivity & Validation**:  
-- Confirm tests run consistently in both local Docker environments and AWS-hosted environments.  
-- Document any known issues or edge cases, laying a foundation for advanced scenarios (security/performance).
+#### *Testing*
+![image](https://github.com/user-attachments/assets/6cf9a499-e7f7-452b-9a0c-7e9ee94d6d1c)
 
 ---
 
